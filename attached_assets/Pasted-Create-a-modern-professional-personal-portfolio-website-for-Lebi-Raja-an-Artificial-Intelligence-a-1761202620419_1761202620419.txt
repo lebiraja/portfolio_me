@@ -1,0 +1,88 @@
+Create a modern, professional personal portfolio website for Lebi Raja, an Artificial Intelligence and Data Science engineering student at Karunya University.
+
+The portfolio should have a clean, elegant, tech-inspired design with smooth animations, subtle gradients, and a balance of professional and friendly tone.
+
+🧑‍💼 About Section
+
+Name: Lebi Raja
+
+Preferred name: Lebi
+
+Role: AI & Data Science Engineer
+
+Location: Coimbatore, India
+
+Short bio: Passionate about building intelligent systems that bridge human creativity and machine reasoning. I specialize in LLM applications, computer vision, and data-driven automation. I love anime, solo travel, and innovation that inspires human connection.
+
+💻 Tech Stack
+
+Languages: Python, Java, JavaScript, HTML, CSS
+
+Frameworks/Tools: Streamlit, Flask, React, FastAPI, OpenCV, MediaPipe, PyAutoGUI
+
+AI/ML Tools: TensorFlow, PyTorch, NLTK, Scikit-learn, Ollama, ChromaDB
+
+Databases: MySQL, MongoDB, Firebase
+
+Other Skills: REST APIs, Data Cleaning, RAG Pipelines, Google APIs integration, Computer Vision, Prompt Engineering
+
+🚀 Projects Section
+
+Include project cards with short summaries and GitHub links:
+
+StudyMateAI – A smart study assistant integrating Google Classroom & Drive APIs with an Auto-RAG system for assignment solving.
+
+CareerWise AI – An intelligent career mentor analyzing resumes and GitHub profiles using LLMs.
+
+Data-Boy – A Telegram bot that cleans and validates datasets using local LLMs through Ollama.
+
+Gesture Control System – Real-time gesture-based PC controller using OpenCV, MediaPipe, and PyAutoGUI.
+
+HerDays – A flower-themed period tracking mobile app built as a gift, featuring mood tracking, reminders, and shared notes.
+
+Each project card should include:
+
+Project name
+
+One-line tagline
+
+Short description (2–3 sentences)
+
+Tech stack used
+
+“View on GitHub” button
+
+🧠 Experience Section
+
+AI & Data Science Student, Karunya University — 2024–Present
+Working on advanced projects in LLMs, multimodal RAG systems, and intelligent automation.
+
+Independent AI Developer — Building innovative tools integrating local LLMs, APIs, and real-time data processing.
+
+🌐 Contact & Social Links
+
+GitHub: https://github.com/Lebi-Raja
+
+LinkedIn: https://linkedin.com/in/lebi-raja
+
+Email: [Your Email Here]
+
+🧩 Design Preferences
+
+Minimal, sleek UI with white and light gray backgrounds, accented by soft gradient blues and purples.
+
+Use glassmorphism or neumorphism subtly for cards.
+
+Include animated skill icons, scroll-based transitions, and section dividers with a futuristic aesthetic.
+
+Add a responsive layout that looks beautiful on desktop and mobile.
+
+🌟 Bonus Features
+
+Include a floating “Let’s Connect” button that opens my contact options.
+
+Add a dark/light mode toggle.
+
+Include smooth scroll and interactive hover effects for project cards.
+
+Goal: Build a professional, modern portfolio that highlights my projects, skills, and experiences while reflecting creativity and innovation.
