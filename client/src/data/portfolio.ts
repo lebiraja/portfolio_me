@@ -91,11 +91,15 @@ export const techStack: TechCategory[] = [
 export const socialLinks = {
   github: "https://github.com/Lebi-Raja",
   linkedin: "https://linkedin.com/in/lebi-raja",
-  email: "lebiraja@example.com"
+  email: "lebiraja2007@gmail.com",
+  phone: "8489195917",
+  whatsapp: "8489195917",
+  instagram: "https://instagram.com/lebi_raja_07",
+  snapchat: "lebiraja2007"
 };
 
 export const personalInfo = {
-  name: "Lebi Raja",
+  name: "LEBI RAJA ",
   preferredName: "Lebi",
   role: "AI & Data Science Engineer",
   location: "Coimbatore, India",

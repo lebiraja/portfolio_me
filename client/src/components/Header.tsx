@@ -83,7 +83,7 @@ export function Header() {
                     e.preventDefault();
                     handleNavClick(link.href);
                   }}
-                  className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 hover-elevate ${
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 hover-elevate ${
                     activeSection === link.href.slice(1)
                       ? "text-primary"
                       : "text-muted-foreground hover:text-foreground"
@@ -91,13 +91,6 @@ export function Header() {
                   data-testid={`link-nav-${link.name.toLowerCase()}`}
                 >
                   {link.name}
-                  {activeSection === link.href.slice(1) && (
-                    <motion.div
-                      layoutId="activeSection"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-chart-2"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                    />
-                  )}
                 </a>
               ))}
             </nav>
@@ -158,12 +151,12 @@ export function Header() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  className={`px-4 py-3 rounded-lg text-base font-medium transition-colors duration-300 ${
+                  className={`px-4 py-3 rounded-lg font-medium transition-colors duration-300 ${
                     activeSection === link.href.slice(1)
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                      ? "bg-primary/10 text-primary"
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
-                  data-testid={`link-mobile-${link.name.toLowerCase()}`}
+                  data-testid={`link-mobile-nav-${link.name.toLowerCase()}`}
                 >
                   {link.name}
                 </motion.a>

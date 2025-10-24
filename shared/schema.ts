@@ -43,3 +43,14 @@ export const experienceSchema = z.object({
 
 export type ProjectType = z.infer<typeof projectSchema>;
 export type ExperienceType = z.infer<typeof experienceSchema>;
+
+export interface User {
+  id: string;
+  username: string;
+  password: string;
+}
+
+export interface InsertUser {
+  username: string;
+  password: string;
+}
