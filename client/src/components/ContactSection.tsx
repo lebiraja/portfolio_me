@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Github, Linkedin, Mail, Copy, Check, Phone, MessageCircle, Camera, Instagram } from "lucide-react";
+import { Github, Linkedin, Mail, Copy, Check, Phone, MessageCircle, Instagram, QrCode } from "lucide-react";
 import { socialLinks } from "@/data/portfolio";
 import { useToast } from "@/hooks/use-toast";
 
@@ -64,7 +64,7 @@ export function ContactSection() {
     },
     {
       name: "Snapchat",
-      icon: Camera,
+      icon: QrCode,
       value: `https://snapchat.com/add/${socialLinks.snapchat}`,
       type: "link",
       color: "from-yellow-400 to-yellow-600",
