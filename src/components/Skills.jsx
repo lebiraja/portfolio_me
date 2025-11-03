@@ -2,6 +2,42 @@ import React from 'react';
 import './Skills.css';
 
 const Skills = () => {
+  // Skill icon mapping using CDN URLs for logos
+  const skillIcons = {
+    // Languages
+    'C': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
+    'C++': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
+    'Java': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+    'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    'Dart': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg',
+    
+    // Frameworks & Libraries
+    'TensorFlow': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
+    'PyTorch': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg',
+    'Scikit-learn': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg',
+    'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    
+    // AI & ML (using custom/generic icons)
+    'Ollama': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    'MCP': 'https://img.icons8.com/fluency/48/artificial-intelligence.png',
+    'Generative AI': 'https://img.icons8.com/fluency/48/chatgpt.png',
+    'LLM': 'https://img.icons8.com/fluency/48/brain.png',
+    'AI Prompt Engineering': 'https://img.icons8.com/fluency/48/code.png',
+    'RAG': 'https://img.icons8.com/fluency/48/database.png',
+    
+    // Databases
+    'SQL': 'https://img.icons8.com/color/48/sql.png',
+    'SQLite': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg',
+    'PostgreSQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+    'MongoDB': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    
+    // DevOps & Tools
+    'Docker': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+    'Git': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'
+  };
+
   const skillCategories = [
     {
       category: 'Languages',
@@ -54,7 +90,14 @@ const Skills = () => {
                       color: category.color
                     }}
                   >
-                    {skill}
+                    {skillIcons[skill] && (
+                      <img 
+                        src={skillIcons[skill]} 
+                        alt={skill}
+                        className="skill-icon"
+                      />
+                    )}
+                    <span>{skill}</span>
                   </span>
                 ))}
               </div>

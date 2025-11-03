@@ -67,6 +67,16 @@
   cursor: pointer;
   animation: fadeInScale 0.4s ease-out both;
   animation-delay: var(--item-delay);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-tag .skill-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .skill-tag:hover {
@@ -74,6 +84,11 @@
   box-shadow: 0 10px 20px -5px currentColor;
   background: currentColor;
   color: white !important;
+}
+
+.skill-tag:hover .skill-icon {
+  transform: scale(1.1) rotate(5deg);
+  filter: brightness(0) invert(1);
 }
 
 .skills-grid {
@@ -220,6 +235,11 @@
     font-size: 0.85rem;
   }
   
+  .skill-tag .skill-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -259,5 +279,10 @@
   .skill-tag {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
+  }
+  
+  .skill-tag .skill-icon {
+    width: 16px;
+    height: 16px;
   }
 }

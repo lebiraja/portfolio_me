@@ -7,7 +7,7 @@ const Projects = () => {
       title: 'StudyMateAI',
       description: 'An advanced learning companion that integrates Google Classroom and Drive APIs to automatically analyze assignments, retrieve materials, and generate intelligent responses using a local LLM. Features RAG pipeline with ChromaDB for context-aware answers.',
       technologies: ['Python', 'Streamlit', 'Google API', 'LLM', 'ChromaDB'],
-      image: 'https://via.placeholder.com/600x400/3b82f6/ffffff?text=StudyMateAI',
+      image: '/studymate.jpg',
       github: 'https://github.com/lebiraja',
       demo: '#'
     },
@@ -15,7 +15,7 @@ const Projects = () => {
       title: 'CareerWise AI',
       description: 'An intelligent career mentor that analyzes user resumes and GitHub profiles to provide personalized career recommendations. Powered by LangChain and Ollama for deep insights into skills, projects, and career trajectory.',
       technologies: ['Python', 'Flask', 'Ollama', 'LangChain', 'NLP'],
-      image: 'https://via.placeholder.com/600x400/8b5cf6/ffffff?text=CareerWise+AI',
+      image: '/CareerWise.jpeg',
       github: 'https://github.com/lebiraja',
       demo: '#'
     },
@@ -23,7 +23,7 @@ const Projects = () => {
       title: 'Hand Gesture Control System',
       description: 'A real-time gesture-based control system with adaptive sensitivity and app-specific profiles. Merges OpenCV, MediaPipe, and PyAutoGUI for intuitive human-computer interaction, enabling hands-free control of applications.',
       technologies: ['Python', 'OpenCV', 'MediaPipe', 'PyAutoGUI'],
-      image: 'https://via.placeholder.com/600x400/10b981/ffffff?text=Gesture+Control',
+      image: '/Hand Gesture Control System.jpg',
       github: 'https://github.com/lebiraja',
       demo: '#'
     },
@@ -31,7 +31,7 @@ const Projects = () => {
       title: 'Data-Boy Bot',
       description: 'A Telegram bot that uses local LLMs to clean, validate, and summarize datasets uploaded by users. Automates data preprocessing tasks and provides intelligent insights, making data analysis accessible to everyone.',
       technologies: ['Python', 'Telegram API', 'LLM', 'Pandas'],
-      image: 'https://via.placeholder.com/600x400/f59e0b/ffffff?text=Data-Boy+Bot',
+      image: '/Data-Boy Bot.jpeg',
       github: 'https://github.com/lebiraja',
       demo: '#'
     }
