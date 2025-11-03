@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <a href="#home" className="logo">Portfolio</a>
+        <a href="#home" className="logo">LR</a>
         
         <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
           <span></span>

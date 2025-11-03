@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
-        <p>Built with ❤️ using React</p>
+        <p>&copy; {new Date().getFullYear()} Lebi Raja. All rights reserved.</p>
+        <p>Crafted with precision & passion using React</p>
       </div>
     </footer>
   );

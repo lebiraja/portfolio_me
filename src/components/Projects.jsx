@@ -52,7 +52,9 @@ const Projects = () => {
                 <p className="project-description">{project.description}</p>
                 <div className="project-tech">
                   {project.technologies.map((tech, i) => (
-                    <span key={i} className="tech-tag">{tech}</span>
+                    <span key={i} className="tech-tag">
+                      <span>{tech}</span>
+                    </span>
                   ))}
                 </div>
                 <div className="project-links">
