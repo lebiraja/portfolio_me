@@ -1,13 +1,16 @@
 {
-  "name": "dotdev_port",
+  "name": "lebiraja-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Professional portfolio showcasing AI & Data Science projects by Lebi Raja",
+  "author": "Lebi Raja <lebiraja2007@gmail.com>",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "vite preview --port 4173"
   },
   "dependencies": {
     "react": "^19.1.1",

@@ -13,7 +13,12 @@ const About = () => {
           <div className="about-image-container">
             <div className="image-backdrop"></div>
             <div className="about-image">
-              <img src="/profile.jpg" alt="Lebi Raja - AI Engineer" />
+              <img 
+                src="/profile.jpg" 
+                alt="Lebi Raja - AI Engineer" 
+                loading="lazy"
+                decoding="async"
+              />
               <div className="image-border"></div>
             </div>
           </div>
