@@ -18,15 +18,11 @@ const Hero = () => {
 
   return (
     <section className="hero" id="home">
-      <div className="hero-grid">
-        {[...Array(50)].map((_, i) => (
-          <div key={i} className="grid-cell"></div>
-        ))}
-      </div>
+      <div className="hero-grid"></div>
       <div 
         className="gradient-overlay"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(59, 130, 246, 0.3), transparent 50%)`
+          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(37, 99, 235, 0.15), rgba(124, 58, 237, 0.1) 40%, transparent 60%)`
         }}
       ></div>
       <div className="hero-content">
