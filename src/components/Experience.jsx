@@ -4,8 +4,8 @@ import './Experience.css';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Inten',
-      company: 'Innovate Inten',
+      title: 'Intern',
+      company: 'Innovate Intern',
       period: '2025 - July',
       description: 'Developed a CCN based model for Leaf disease detection and classification, achieving high accuracy and efficiency in real-time applications.',
       achievements: [
