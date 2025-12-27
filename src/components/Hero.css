@@ -9,6 +9,12 @@
   padding: 2rem;
   position: relative;
   overflow: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+[data-theme="dark"] .hero {
+  background: #0a0a0a;
+  color: #f5f5f5;
 }
 
 .hero-grid {
@@ -17,13 +23,19 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(37, 99, 235, 0.08) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
   background-size: 80px 80px;
   opacity: 1;
   z-index: 0;
   animation: gridFloat 20s ease-in-out infinite;
+}
+
+[data-theme="dark"] .hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(106, 106, 106, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(106, 106, 106, 0.08) 1px, transparent 1px);
 }
 
 .hero-grid::before {
@@ -33,14 +45,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    linear-gradient(to right, rgba(124, 58, 237, 0.05) 2px, transparent 2px),
-    linear-gradient(to bottom, rgba(124, 58, 237, 0.05) 2px, transparent 2px);
+  background-image:
+    linear-gradient(to right, rgba(212, 175, 55, 0.05) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.05) 2px, transparent 2px);
   background-size: 80px 80px;
   animation: gridFloat 15s ease-in-out infinite reverse;
 }
 
-/* Grid pattern with accent dots on intersections */
 .hero-grid::after {
   content: '';
   position: absolute;
@@ -48,7 +59,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(circle at center, rgba(212, 175, 55, 0.15) 1.5px, transparent 1.5px);
   background-size: 80px 80px;
   animation: gridPulse 4s ease-in-out infinite;
 }
@@ -76,11 +87,11 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1.25rem;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(184, 134, 11, 0.1));
+  border: 1px solid rgba(212, 175, 55, 0.3);
   border-radius: 50px;
   font-size: 0.9rem;
-  color: #3b82f6;
+  color: #D4AF37;
   margin-bottom: 2rem;
   animation: slideDown 1s ease-out 0.2s both;
 }
@@ -97,7 +108,7 @@
   font-size: 4.5rem;
   font-weight: 900;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #0f172a 0%, #2563eb 40%, #7c3aed 70%, #06b6d4 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 40%, #D4AF37 70%, #FFD700 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -105,18 +116,25 @@
   animation: slideDown 1s ease-out 0.4s both, gradientShift 8s ease infinite;
   line-height: 1.15;
   letter-spacing: -0.03em;
-  text-shadow: 0 0 80px rgba(37, 99, 235, 0.3);
+  text-shadow: 0 0 80px rgba(212, 175, 55, 0.3);
 }
 
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .highlight {
   position: relative;
-  color: #3b82f6;
-  -webkit-text-fill-color: #3b82f6;
+  color: #D4AF37;
+  -webkit-text-fill-color: #D4AF37;
 }
 
 .highlight::after {
@@ -126,14 +144,14 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(90deg, #D4AF37, #FFD700);
   animation: underlineExpand 1s ease-out 1s both;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #64748b;
+  color: #6a6a6a;
   font-weight: 500;
   animation: slideDown 1s ease-out 0.6s both;
 }
@@ -141,7 +159,7 @@
 .hero-description {
   font-size: 1.1rem;
   margin-bottom: 2.5rem;
-  color: #64748b;
+  color: #6a6a6a;
   line-height: 1.8;
   animation: slideDown 1s ease-out 0.8s both;
 }
@@ -197,6 +215,7 @@
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), transparent);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.3s;
@@ -206,22 +225,23 @@
   opacity: 1;
 }
 
-.btn span, .btn svg {
+.btn span,
+.btn svg {
   position: relative;
   z-index: 1;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
   color: white;
-  box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.4), 0 4px 12px -2px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.4), 0 4px 12px -2px rgba(212, 175, 55, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.5), 0 10px 20px -5px rgba(124, 58, 237, 0.3);
-  background: linear-gradient(135deg, #1d4ed8 0%, #6d28d9 100%);
+  box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.5), 0 10px 20px -5px rgba(184, 134, 11, 0.3);
+  background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
 }
 
 .btn-primary svg {
@@ -235,17 +255,17 @@
 .btn-secondary {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  color: #2563eb;
-  border: 2px solid rgba(37, 99, 235, 0.3);
+  color: #D4AF37;
+  border: 2px solid rgba(212, 175, 55, 0.3);
   box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
 }
 
 .btn-secondary:hover {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  background: linear-gradient(135deg, #D4AF37, #B8860B);
   color: white;
   border-color: transparent;
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 30px -8px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 12px 30px -8px rgba(212, 175, 55, 0.4);
 }
 
 .scroll-indicator {
@@ -257,7 +277,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: #64748b;
+  color: #6a6a6a;
   font-size: 0.85rem;
   animation: fadeIn 1s ease-out 1.5s both;
   z-index: 2;
@@ -266,7 +286,7 @@
 .mouse {
   width: 24px;
   height: 40px;
-  border: 2px solid #3b82f6;
+  border: 2px solid #D4AF37;
   border-radius: 12px;
   position: relative;
 }
@@ -279,7 +299,7 @@
   transform: translateX(-50%);
   width: 4px;
   height: 8px;
-  background: #3b82f6;
+  background: #D4AF37;
   border-radius: 2px;
   animation: scroll 2s ease-in-out infinite;
 }
@@ -289,6 +309,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -300,6 +321,7 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -310,16 +332,20 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.5;
     transform: scale(1.2);
@@ -331,34 +357,44 @@
     transform: translate(-50%, 0);
     opacity: 0;
   }
+
   40% {
     opacity: 1;
   }
+
   80% {
     transform: translate(-50%, 15px);
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
 }
 
 @keyframes gridPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.3;
   }
+
   50% {
     opacity: 0.6;
   }
 }
 
 @keyframes gridFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) translateX(0);
   }
+
   33% {
     transform: translateY(-10px) translateX(5px);
   }
+
   66% {
     transform: translateY(5px) translateX(-8px);
   }
@@ -368,6 +404,7 @@
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -377,11 +414,11 @@
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
   }
-  
+
   .hero-description {
     font-size: 1rem;
   }

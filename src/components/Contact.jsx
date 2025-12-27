@@ -2,25 +2,8 @@ import React, { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
-  };
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   return (
     <section className="contact" id="contact">
@@ -64,14 +47,26 @@ const Contact = () => {
               </a>
             </div>
           </div>
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form 
+            className="contact-form" 
+            action="https://formspree.io/f/mbdjdven"
+            method="POST"
+          >
+            {submitStatus === 'success' && (
+              <div className="form-message success">
+                ✓ Thank you! Your message has been sent successfully. I'll get back to you soon.
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="form-message error">
+                ✗ Something went wrong. Please try again.
+              </div>
+            )}
             <div className="form-group">
               <input
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
                 required
               />
             </div>
@@ -80,8 +75,6 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
                 required
               />
             </div>
@@ -90,13 +83,11 @@ const Contact = () => {
                 name="message"
                 placeholder="Your Message"
                 rows="5"
-                value={formData.message}
-                onChange={handleChange}
                 required
               ></textarea>
             </div>
-            <button type="submit" className="btn btn-primary">
-              <span>Send Message</span>
+            <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+              <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
               </svg>
