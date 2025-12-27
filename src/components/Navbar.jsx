@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, toggleDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -40,6 +40,11 @@ const Navbar = () => {
           <li><a href="#experience" onClick={handleNavClick}>Experience</a></li>
           <li><a href="#projects" onClick={handleNavClick}>Projects</a></li>
           <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
+          <li>
+            <button className="dark-mode-toggle" onClick={toggleDarkMode} title="Toggle dark mode">
+              {isDarkMode ? '☀️' : '🌙'}
+            </button>
+          </li>
         </ul>
       </div>
     </nav>

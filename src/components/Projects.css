@@ -11,7 +11,7 @@
   right: -10%;
   width: 40%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(184, 134, 11, 0.05));
   border-radius: 50%;
   filter: blur(60px);
 }
@@ -48,9 +48,10 @@
   inset: 0;
   border-radius: 24px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(124, 58, 237, 0.2));
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(184, 134, 11, 0.2));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.5s;
@@ -74,8 +75,8 @@
 
 .project-card:hover {
   transform: translateY(-12px) scale(1.01);
-  box-shadow: 0 30px 60px -12px rgba(37, 99, 235, 0.25), 0 18px 36px -18px rgba(124, 58, 237, 0.2);
-  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 30px 60px -12px rgba(212, 175, 55, 0.25), 0 18px 36px -18px rgba(184, 134, 11, 0.2);
+  border-color: rgba(212, 175, 55, 0.4);
 }
 
 .project-image {
@@ -90,7 +91,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(184, 134, 11, 0.2));
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 1;
@@ -120,17 +121,17 @@
 
 .project-title {
   font-size: 2rem;
-  color: #1e293b;
+  color: #1a1a1a;
   margin-bottom: 1rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #D4AF37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .project-description {
-  color: #64748b;
+  color: #6a6a6a;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   font-size: 1.05rem;
@@ -145,9 +146,9 @@
 
 .tech-tag {
   padding: 0.625rem 1.25rem;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(124, 58, 237, 0.08));
-  color: #2563eb;
-  border: 1px solid rgba(37, 99, 235, 0.25);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(184, 134, 11, 0.08));
+  color: #D4AF37;
+  border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 10px;
   font-size: 0.875rem;
   font-weight: 700;
@@ -161,7 +162,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  background: linear-gradient(135deg, #D4AF37, #B8860B);
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -174,7 +175,7 @@
   color: white;
   transform: translateY(-3px) scale(1.05);
   border-color: transparent;
-  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 8px 20px -4px rgba(212, 175, 55, 0.4);
 }
 
 .tech-tag span {
@@ -190,8 +191,8 @@
 .project-link {
   padding: 0.75rem 1.5rem;
   background: transparent;
-  border: 2px solid #3b82f6;
-  color: #3b82f6;
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
   text-decoration: none;
   font-weight: 600;
   border-radius: 10px;
@@ -202,11 +203,11 @@
 }
 
 .project-link:hover {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, #D4AF37, #B8860B);
   color: white;
   border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
 }
 
 @keyframes fadeInSlide {
@@ -214,6 +215,7 @@
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
