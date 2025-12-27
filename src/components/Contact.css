@@ -68,6 +68,58 @@
   filter: grayscale(0.3);
 }
 
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #D4AF37, #B8860B);
+  color: white;
+  text-decoration: none;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.resume-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.resume-button:hover::before {
+  opacity: 1;
+}
+
+.resume-button span,
+.resume-button svg {
+  position: relative;
+  z-index: 1;
+}
+
+.resume-button svg {
+  transition: transform 0.3s ease;
+}
+
+.resume-button:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.5);
+}
+
+.resume-button:hover svg {
+  transform: translateY(2px);
+}
+
 .social-links {
   display: flex;
   gap: 1rem;
