@@ -10,11 +10,12 @@ import Footer from './components/Footer'
 import './App.css'
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
 
   useEffect(() => {
-    // Check localStorage for saved preference
-    const savedMode = localStorage.getItem('darkMode') === 'true'
+    // Check localStorage for saved preference, default to dark mode
+    const savedModeValue = localStorage.getItem('darkMode')
+    const savedMode = savedModeValue === null ? true : savedModeValue === 'true'
     setIsDarkMode(savedMode)
     if (savedMode) {
       document.documentElement.setAttribute('data-theme', 'dark')
