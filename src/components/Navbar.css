@@ -5,29 +5,57 @@
   right: 0;
   z-index: 1000;
   padding: 1.25rem 2rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.3);
+  transition: all var(--glass-transition);
+
+  /* LIQUID GLASS EFFECT */
+  background: var(--glass-tint-white);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border-bottom: var(--glass-border-medium);
+  box-shadow: var(--glass-shadow-float);
+}
+
+/* Reflection highlight */
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: var(--glass-reflection-top);
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0.6;
+  transition: opacity var(--glass-transition);
 }
 
 [data-theme="dark"] .navbar {
-  background: rgba(10, 10, 10, 0.9);
-  border-bottom: 1px solid rgba(106, 106, 106, 0.3);
+  background: var(--glass-tint-white);
+  border-bottom: var(--glass-border-medium);
+  box-shadow: var(--glass-shadow-float);
+}
+
+/* Hide reflection in dark mode - it can appear as a dark overlay */
+[data-theme="dark"] .navbar::before {
+  opacity: 0.3;
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+  background: var(--glass-tint-white-heavy);
+  box-shadow: var(--glass-shadow-elevated);
+  border-bottom: var(--glass-border-light);
   padding: 1rem 2rem;
 }
 
+.navbar.scrolled::before {
+  opacity: 0.4;
+}
+
 [data-theme="dark"] .navbar.scrolled {
-  background: rgba(10, 10, 10, 0.95);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(106, 106, 106, 0.5);
+  background: var(--glass-tint-white-heavy);
+  box-shadow: var(--glass-shadow-elevated);
+  border-bottom: var(--glass-border-light);
 }
 
 .nav-container {
@@ -169,12 +197,16 @@
     top: 70px;
     left: -100%;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.98);
     width: 100%;
     padding: 2rem;
     gap: 1.5rem;
     transition: left 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* LIQUID GLASS MOBILE MENU */
+    background: var(--glass-tint-white-heavy);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    box-shadow: var(--glass-shadow-elevated);
   }
 
   .nav-menu.active {

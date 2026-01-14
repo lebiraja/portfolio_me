@@ -1,5 +1,52 @@
 /* Global Dark Mode Styles */
 
+/* === DARK MODE LIQUID GLASS VARIABLES === */
+:root[data-theme="dark"] {
+  /* Dark Glass Tints */
+  --glass-tint-white: rgba(26, 26, 26, 0.7);
+  --glass-tint-white-heavy: rgba(26, 26, 26, 0.85);
+  --glass-tint-white-light: rgba(26, 26, 26, 0.5);
+  --glass-tint-gold: rgba(212, 175, 55, 0.05);
+  --glass-tint-gold-medium: rgba(212, 175, 55, 0.12);
+
+  /* Dark Refraction Borders */
+  --glass-border-light: 1px solid rgba(106, 106, 106, 0.4);
+  --glass-border-medium: 1px solid rgba(106, 106, 106, 0.25);
+  --glass-border-subtle: 1px solid rgba(106, 106, 106, 0.15);
+
+  /* Dark Glass Reflections */
+  --glass-reflection-top: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 20%,
+    transparent 50%
+  );
+  --glass-reflection-gold: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.15) 0%,
+    rgba(212, 175, 55, 0.08) 50%,
+    transparent 100%
+  );
+
+  /* Dark Depth Shadows */
+  --glass-shadow-float:
+    0 8px 32px -8px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(106, 106, 106, 0.3) inset;
+  --glass-shadow-elevated:
+    0 16px 48px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(106, 106, 106, 0.3) inset,
+    0 1px 2px rgba(255, 255, 255, 0.05) inset;
+  --glass-shadow-hover:
+    0 24px 64px -16px rgba(212, 175, 55, 0.4),
+    0 0 0 1px rgba(212, 175, 55, 0.4) inset,
+    0 1px 3px rgba(255, 215, 0, 0.15) inset;
+
+  /* Dark Gold Glows (Enhanced for visibility) */
+  --gold-glow-soft: 0 0 40px rgba(212, 175, 55, 0.2);
+  --gold-glow-medium: 0 0 60px rgba(212, 175, 55, 0.35);
+  --gold-glow-strong: 0 0 80px rgba(255, 215, 0, 0.45);
+}
+
 /* Section Titles - Bright and Visible */
 [data-theme="dark"] .section-title {
   color: #ffffff !important;
@@ -315,7 +362,7 @@
 
 /* Mobile menu in dark mode */
 [data-theme="dark"] .nav-menu {
-  background-color: rgba(10, 10, 10, 0.98);
+  background: var(--glass-tint-white-heavy);
 }
 
 [data-theme="dark"] .mobile-menu-btn span {

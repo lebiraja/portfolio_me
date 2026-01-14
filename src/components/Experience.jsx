@@ -15,7 +15,7 @@ const Experience = () => {
     {
       title: 'Tech Lead',
       company: 'IITM IC Build Club',
-      period: '2024 - Present',
+      period: '2024 - 2025',
       description: 'Leading cross-disciplinary teams at IIT Madras Innovation Centre to design and build intelligent hardware prototypes and AI-powered systems that merge software with real-world engineering.',
       achievements: [
 

@@ -57,16 +57,65 @@
 }
 
 .timeline-content {
-  background: #f8f9fa;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+
+  /* GLASS TIMELINE CARD */
+  background: var(--glass-tint-white);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: var(--glass-border-light);
+  box-shadow: var(--glass-shadow-float);
+  transition: all var(--glass-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top glass reflection */
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: var(--glass-reflection-top);
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.4;
+  transition: opacity var(--glass-transition);
+}
+
+/* Refraction border on hover */
+.timeline-content::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg,
+    rgba(255, 215, 0, 0.4),
+    transparent
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--glass-transition);
 }
 
 .timeline-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) translateX(5px);
+  box-shadow: var(--glass-shadow-hover), var(--gold-glow-soft);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.timeline-content:hover::before {
+  opacity: 0.7;
+}
+
+.timeline-content:hover::after {
+  opacity: 1;
 }
 
 .experience-header {

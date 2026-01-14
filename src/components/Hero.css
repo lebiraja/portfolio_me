@@ -86,14 +86,41 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1.25rem;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(184, 134, 11, 0.1));
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 0.75rem 1.5rem;
   border-radius: 50px;
   font-size: 0.9rem;
-  color: #D4AF37;
+  color: var(--primary-gold);
   margin-bottom: 2rem;
   animation: slideDown 1s ease-out 0.2s both;
+
+  /* LIQUID GLASS BADGE */
+  background: var(--glass-tint-white);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: var(--glass-border-light);
+  box-shadow: var(--glass-shadow-float), var(--gold-glow-soft);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--glass-transition);
+}
+
+/* Glass reflection highlight */
+.hero-badge::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: var(--glass-reflection-gold);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.hero-badge:hover {
+  transform: scale(1.05);
+  box-shadow: var(--glass-shadow-hover), var(--gold-glow-medium);
+  border-color: rgba(255, 215, 0, 0.6);
 }
 
 .badge-dot {
@@ -234,13 +261,38 @@
 .btn-primary {
   background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
   color: white;
-  box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.4), 0 4px 12px -2px rgba(212, 175, 55, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: var(--glass-border-light);
+
+  /* GLASS ELEVATION */
+  box-shadow:
+    var(--glass-shadow-elevated),
+    0 20px 40px -10px rgba(212, 175, 55, 0.4);
+  position: relative;
+}
+
+/* Reflection shine on glass button */
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.35) 0%,
+    transparent 100%
+  );
+  border-radius: 14px 14px 0 0;
+  pointer-events: none;
+  opacity: 1;
 }
 
 .btn-primary:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.5), 0 10px 20px -5px rgba(184, 134, 11, 0.3);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    var(--glass-shadow-hover),
+    0 30px 60px -15px rgba(212, 175, 55, 0.6);
   background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
 }
 
@@ -253,19 +305,37 @@
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  color: #D4AF37;
-  border: 2px solid rgba(212, 175, 55, 0.3);
-  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+  /* FLOATING GLASS BUTTON */
+  background: var(--glass-tint-white);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  color: var(--primary-gold);
+  border: var(--glass-border-light);
+  box-shadow: var(--glass-shadow-float);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glass reflection */
+.btn-secondary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: var(--glass-reflection-top);
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.6;
 }
 
 .btn-secondary:hover {
-  background: linear-gradient(135deg, #D4AF37, #B8860B);
-  color: white;
-  border-color: transparent;
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 30px -8px rgba(212, 175, 55, 0.4);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(184, 134, 11, 0.2));
+  border-color: rgba(255, 215, 0, 0.6);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: var(--glass-shadow-hover);
+  color: var(--gold-dark);
 }
 
 .scroll-indicator {

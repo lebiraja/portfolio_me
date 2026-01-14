@@ -142,16 +142,67 @@
 
 .stat-item {
   text-align: center;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(184, 134, 11, 0.05));
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
   cursor: pointer;
+
+  /* LIQUID GLASS CARD */
+  background: var(--glass-tint-white);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: var(--glass-border-light);
+  box-shadow: var(--glass-shadow-float);
+  transition: all var(--glass-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top reflection */
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: var(--glass-reflection-top);
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity var(--glass-transition);
+}
+
+/* Refraction border glow */
+.stat-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1.5px;
+  background: linear-gradient(135deg,
+    rgba(255, 215, 0, 0.4),
+    rgba(212, 175, 55, 0.2),
+    transparent
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--glass-transition);
 }
 
 .stat-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: var(--glass-shadow-hover), var(--gold-glow-medium);
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+.stat-item:hover::before {
+  opacity: 1;
+}
+
+.stat-item:hover::after {
+  opacity: 1;
 }
 
 .stat-item h4 {

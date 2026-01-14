@@ -27,28 +27,36 @@
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   display: grid;
   grid-template-columns: 45% 55%;
   gap: 0;
   animation: fadeInSlide 0.8s ease-out both;
-  border: 1px solid rgba(226, 232, 240, 0.6);
   align-items: center;
+
+  /* PREMIUM GLASS PROJECT CARD */
+  background: var(--glass-tint-white);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: var(--glass-border-light);
+  box-shadow: var(--glass-shadow-elevated);
+  transition: all 0.5s var(--spring-smooth);
   position: relative;
 }
 
+/* Enhanced refraction border */
 .project-card::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 24px;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(184, 134, 11, 0.2));
+  padding: 2px;
+  background: linear-gradient(135deg,
+    rgba(255, 215, 0, 0.3),
+    rgba(212, 175, 55, 0.2),
+    transparent
+  );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -57,8 +65,34 @@
   transition: opacity 0.5s;
 }
 
+/* Glass reflection highlight */
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: var(--glass-reflection-top);
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.3;
+  transition: opacity 0.5s;
+  z-index: 0;
+}
+
 .project-card:hover::before {
   opacity: 1;
+}
+
+.project-card:hover::after {
+  opacity: 0.5;
+}
+
+.project-card:hover {
+  transform: translateY(-16px) scale(1.02);
+  box-shadow: var(--glass-shadow-hover), var(--gold-glow-strong);
+  border-color: rgba(255, 215, 0, 0.6);
 }
 
 .project-card:nth-child(even) {
@@ -71,12 +105,6 @@
 
 .project-card:nth-child(even) .project-content {
   order: 1;
-}
-
-.project-card:hover {
-  transform: translateY(-12px) scale(1.01);
-  box-shadow: 0 30px 60px -12px rgba(212, 175, 55, 0.25), 0 18px 36px -18px rgba(184, 134, 11, 0.2);
-  border-color: rgba(212, 175, 55, 0.4);
 }
 
 .project-image {
@@ -146,36 +174,54 @@
 
 .tech-tag {
   padding: 0.625rem 1.25rem;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(184, 134, 11, 0.08));
-  color: #D4AF37;
-  border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 10px;
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-gold);
+
+  /* GLASS TECH TAG */
+  background: var(--glass-tint-white-light);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: var(--glass-border-subtle);
+  box-shadow:
+    0 4px 12px -4px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  transition: all var(--glass-transition);
   position: relative;
   overflow: hidden;
 }
 
-.tech-tag::before {
+/* Reflection */
+.tech-tag::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #D4AF37, #B8860B);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tech-tag:hover::before {
-  opacity: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 .tech-tag:hover {
-  color: white;
   transform: translateY(-3px) scale(1.05);
-  border-color: transparent;
-  box-shadow: 0 8px 20px -4px rgba(212, 175, 55, 0.4);
+  border-color: rgba(255, 215, 0, 0.6);
+  box-shadow:
+    0 8px 20px -4px rgba(212, 175, 55, 0.4),
+    0 0 0 1.5px rgba(255, 215, 0, 0.5) inset,
+    0 1px 2px rgba(255, 255, 255, 0.6) inset;
+  background: linear-gradient(135deg,
+    rgba(212, 175, 55, 0.2),
+    rgba(255, 215, 0, 0.15)
+  );
+  color: var(--gold-dark);
 }
 
 .tech-tag span {

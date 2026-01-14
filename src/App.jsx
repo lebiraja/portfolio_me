@@ -10,17 +10,20 @@ import Footer from './components/Footer'
 import './App.css'
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true)
-
-  useEffect(() => {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
     // Check localStorage for saved preference, default to dark mode
     const savedModeValue = localStorage.getItem('darkMode')
-    const savedMode = savedModeValue === null ? true : savedModeValue === 'true'
-    setIsDarkMode(savedMode)
-    if (savedMode) {
+    return savedModeValue === null ? true : savedModeValue === 'true'
+  })
+
+  useEffect(() => {
+    // Apply dark mode on mount
+    if (isDarkMode) {
       document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+      document.documentElement.removeAttribute('data-theme')
     }
-  }, [])
+  }, [isDarkMode])
 
   const toggleDarkMode = () => {
     const newMode = !isDarkMode

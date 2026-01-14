@@ -25,6 +25,33 @@
   align-items: start;
 }
 
+.contact-info {
+  /* GLASS CONTAINER */
+  background: var(--glass-tint-white);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: var(--glass-border-light);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: var(--glass-shadow-float);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glass reflection */
+.contact-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: var(--glass-reflection-top);
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .contact-info h3 {
   font-size: 2rem;
   color: #1a1a1a;
@@ -239,15 +266,21 @@
 .form-group textarea {
   width: 100%;
   padding: 1.125rem 1.5rem;
-  border: 2px solid rgba(226, 232, 240, 0.8);
   border-radius: 14px;
   font-size: 1rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
   color: #1a1a1a;
   font-weight: 500;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* GLASS INPUT FIELDS */
+  background: var(--glass-tint-white);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: var(--glass-border-medium);
+  box-shadow:
+    0 4px 12px -4px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  transition: all var(--glass-transition);
 }
 
 .form-group input::placeholder,
@@ -258,10 +291,14 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #D4AF37;
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.08), 0 4px 12px -2px rgba(212, 175, 55, 0.15);
+  border-color: rgba(255, 215, 0, 0.6);
+  box-shadow:
+    0 0 0 4px rgba(212, 175, 55, 0.15),
+    0 8px 24px -8px rgba(212, 175, 55, 0.3),
+    0 0 0 1.5px rgba(255, 215, 0, 0.4) inset,
+    0 1px 2px rgba(255, 255, 255, 0.5) inset;
   transform: translateY(-2px);
-  background: white;
+  background: var(--glass-tint-white-heavy);
 }
 
 .contact-form .btn:disabled {
