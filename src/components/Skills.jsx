@@ -5,64 +5,116 @@ const Skills = () => {
   // Skill icon mapping using CDN URLs for logos
   const skillIcons = {
     // Languages
+    'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    'Java': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+    'JavaScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    'SQL': 'https://img.icons8.com/color/48/sql.png',
     'C': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
     'C++': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
-    'Java': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-    'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-    'Dart': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg',
-    
-    // Frameworks & Libraries
-    'TensorFlow': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
+
+    // ML Frameworks
     'PyTorch': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg',
+    'Hugging Face': 'https://huggingface.co/front/assets/huggingface_logo.png',
+    'LangChain': 'https://img.icons8.com/color/48/python.png',
+    'Ollama': 'https://img.icons8.com/fluency/48/artificial-intelligence.png',
+    'PEFT': 'https://img.icons8.com/fluency/48/brain.png',
     'Scikit-learn': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg',
+    'TensorFlow': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
+
+    // AI & LLM Specializations
+    'LLMs': 'https://img.icons8.com/fluency/48/chatgpt.png',
+    'RAG Architecture': 'https://img.icons8.com/fluency/48/database.png',
+    'LoRA Fine-Tuning': 'https://img.icons8.com/fluency/48/settings.png',
+    'Prompt Engineering': 'https://img.icons8.com/fluency/48/code.png',
+    'Embeddings': 'https://img.icons8.com/fluency/48/neural-network.png',
+    'Vector Databases': 'https://img.icons8.com/fluency/48/database.png',
+
+    // Computer Vision
+    'OpenCV': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg',
+    'MediaPipe': 'https://img.icons8.com/fluency/48/settings.png',
+    'CNN': 'https://img.icons8.com/fluency/48/brain.png',
+
+    // Data & Analytics
+    'Pandas': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg',
+    'NumPy': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg',
+    'Matplotlib': 'https://img.icons8.com/fluency/48/graph.png',
+    'Seaborn': 'https://img.icons8.com/fluency/48/graph.png',
+
+    // Web & Backend
     'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    'TypeScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+    'FastAPI': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg',
+    'Streamlit': 'https://img.icons8.com/color/48/python.png',
+    'Flask': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg',
     'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-    
-    // AI & ML (using custom/generic icons)
-    'Ollama': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-    'MCP': 'https://img.icons8.com/fluency/48/artificial-intelligence.png',
-    'Generative AI': 'https://img.icons8.com/fluency/48/chatgpt.png',
-    'LLM': 'https://img.icons8.com/fluency/48/brain.png',
-    'AI Prompt Engineering': 'https://img.icons8.com/fluency/48/code.png',
-    'RAG': 'https://img.icons8.com/fluency/48/database.png',
-    
+
     // Databases
-    'SQL': 'https://img.icons8.com/color/48/sql.png',
+    'ChromaDB': 'https://img.icons8.com/fluency/48/database.png',
     'SQLite': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg',
     'PostgreSQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
     'MongoDB': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-    
-    // DevOps & Tools
-    'Docker': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+
+    // DevOps & Cloud
     'Git': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-    'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'
+    'GitHub': 'https://img.icons8.com/color/48/github.png',
+    'Docker': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+    'GitHub Actions': 'https://img.icons8.com/color/48/github.png',
+    'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+    'Linux': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
+
+    // APIs & Tools
+    'REST APIs': 'https://img.icons8.com/fluency/48/code.png',
+    'Telegram Bot API': 'https://img.icons8.com/color/48/telegram.png',
+    'Google APIs': 'https://img.icons8.com/color/48/google.png',
+    'PyMuPDF': 'https://img.icons8.com/color/48/pdf.png',
+    'GNOME Shell': 'https://img.icons8.com/color/48/linux.png'
   };
 
   const skillCategories = [
     {
-      category: 'Languages',
-      items: ['C', 'C++', 'Java', 'Python', 'Dart'],
+      category: 'Programming Languages',
+      items: ['Python', 'Java', 'JavaScript', 'SQL', 'C', 'C++'],
       color: '#3b82f6'
     },
     {
-      category: 'Frameworks & Libraries',
-      items: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'React', 'Node.js'],
+      category: 'ML Frameworks',
+      items: ['PyTorch', 'Hugging Face', 'LangChain', 'Ollama', 'PEFT', 'Scikit-learn', 'TensorFlow'],
       color: '#8b5cf6'
     },
     {
-      category: 'AI & Machine Learning',
-      items: ['Ollama', 'MCP', 'Generative AI', 'LLM', 'AI Prompt Engineering', 'RAG'],
+      category: 'AI & LLM Specializations',
+      items: ['LLMs', 'RAG Architecture', 'LoRA Fine-Tuning', 'Prompt Engineering', 'Embeddings', 'Vector Databases'],
       color: '#10b981'
     },
     {
-      category: 'Databases',
-      items: ['SQL', 'SQLite', 'PostgreSQL', 'MongoDB'],
+      category: 'Computer Vision',
+      items: ['OpenCV', 'MediaPipe', 'CNN'],
       color: '#f59e0b'
     },
     {
-      category: 'DevOps & Tools',
-      items: ['Docker', 'Git', 'AWS'],
+      category: 'Data & Analytics',
+      items: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+      color: '#ec4899'
+    },
+    {
+      category: 'Web & Backend',
+      items: ['React', 'TypeScript', 'FastAPI', 'Streamlit', 'Flask', 'Node.js'],
+      color: '#06b6d4'
+    },
+    {
+      category: 'Databases & Vector Storage',
+      items: ['ChromaDB', 'SQLite', 'PostgreSQL', 'MongoDB'],
+      color: '#14b8a6'
+    },
+    {
+      category: 'DevOps & Cloud',
+      items: ['Git', 'GitHub', 'Docker', 'GitHub Actions', 'AWS', 'Linux'],
       color: '#ef4444'
+    },
+    {
+      category: 'APIs & Tools',
+      items: ['REST APIs', 'Telegram Bot API', 'Google APIs', 'PyMuPDF', 'GNOME Shell'],
+      color: '#f97316'
     }
   ];
 

@@ -4,21 +4,34 @@ import './Experience.css';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Intern',
-      company: 'Innovate Intern',
-      period: '2025 - July',
-      description: 'Developed a CCN based model for Leaf disease detection and classification, achieving high accuracy and efficiency in real-time applications.',
+      title: 'Technical Lead — Build Club',
+      company: 'IITM Incubation Cell, IIT Madras Innovation Centre',
+      period: 'Jul 2025 – Jan 2026',
+      description: 'Led end-to-end technical development of AI/ML-based projects aligned with startup and incubation goals.',
       achievements: [
-    
+        'Mentored team members on LLMs, RAG pipelines, and real-world AI system architecture',
+        'Architected scalable AI solutions integrating local and cloud-based LLMs for academic and industrial use cases',
+        'Conducted technical reviews, optimised model pipelines, and enforced production-level code quality standards'
       ]
     },
     {
-      title: 'Tech Lead',
-      company: 'IITM IC Build Club',
-      period: '2024 - 2025',
-      description: 'Leading cross-disciplinary teams at IIT Madras Innovation Centre to design and build intelligent hardware prototypes and AI-powered systems that merge software with real-world engineering.',
+      title: 'AI/ML Intern',
+      company: 'Innovate Intern',
+      period: 'Jun 2025 – Jul 2025',
+      description: 'Developed a CNN-based model for leaf disease detection and classification, achieving high accuracy in real-time scenarios.',
       achievements: [
-
+        'Built Python-based ML workflows using Pandas, NumPy, and Scikit-learn',
+        'Gained practical exposure to deployment challenges and model optimization',
+        'Worked on applied AI/ML projects covering data preprocessing, model training, and performance evaluation'
+      ]
+    },
+    {
+      title: 'Member — Build Club',
+      company: 'IITM Incubation Cell, IIT Madras Innovation Centre',
+      period: 'Sep 2024 – May 2025',
+      description: 'Contributed to cross-disciplinary teams designing intelligent hardware prototypes and AI-powered systems.',
+      achievements: [
+        'Collaborated on projects merging software engineering with real-world hardware integration'
       ]
     }
   ];

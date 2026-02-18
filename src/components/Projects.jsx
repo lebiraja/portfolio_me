@@ -4,8 +4,48 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
+      title: 'ClarityMentor — Fine-Tuned Philosophical AI Mentor',
+      description: 'Fine-tuned a LoRA adapter on Qwen2.5-1.5B-Instruct to provide thoughtful philosophical mentorship and balanced life-guidance responses. Applied 4-bit quantization with Supervised Fine-Tuning (SFT) to optimize model performance on constrained hardware. Publicly published on Hugging Face Hub.',
+      technologies: ['Qwen2.5', 'LoRA', 'PEFT', 'PyTorch', 'Hugging Face', 'BitsAndBytes', 'SFT'],
+      image: '/ClarityMentor.jpg',
+      github: 'https://github.com/lebiraja/ClarityMentor',
+      demo: 'https://huggingface.co/lebiraja'
+    },
+    {
+      title: 'Dictator — Offline Voice-to-Text Desktop Utility',
+      description: 'GNOME Linux desktop utility that captures voice and types transcribed text directly into any active application via keyboard shortcut. Integrates OpenAI Whisper for fully local, privacy-preserving speech-to-text with optional GPU acceleration via CUDA.',
+      technologies: ['Python', 'Whisper', 'GNOME Shell', 'JavaScript/CSS', 'CUDA', 'PipeWire'],
+      image: '/Dictator.jpg',
+      github: 'https://github.com/lebiraja/Dictator',
+      demo: '#'
+    },
+    {
+      title: 'Linux Voice Assistant',
+      description: 'Fully local Linux voice assistant for opening apps, running web searches, and controlling system functions via natural speech. Minimizes cloud dependency using on-device Whisper recognition and subprocess-based OS command execution.',
+      technologies: ['Python', 'Whisper', 'SpeechRecognition', 'PyAudio', 'TTS Engine'],
+      image: '/VoiceAssistant.jpg',
+      github: 'https://github.com/lebiraja/Linux-Voice-Assistant',
+      demo: '#'
+    },
+    {
+      title: 'Plugin — Modular LLM Plugin Framework',
+      description: 'Flexible framework to extend LLM capabilities by dynamically loading and executing user-defined custom plugins. Enables models to connect to external APIs, perform domain-specific tasks, and process structured data beyond plain text generation.',
+      technologies: ['Python', 'LLM Integration', 'Plugin Architecture', 'API Modules'],
+      image: '/Plugin.jpg',
+      github: 'https://github.com/lebiraja/Plugin',
+      demo: '#'
+    },
+    {
+      title: 'DataBoy — AI-Powered Telegram Data Cleaning Bot',
+      description: 'Telegram bot that accepts messy CSV/Excel uploads and returns cleaned, validated datasets using LLM-powered analysis. Implements intelligent handling of missing values, formatting inconsistencies, and data standardization via Pandas + Ollama. Eliminates the need for coding with conversational interface.',
+      technologies: ['Python', 'Telegram Bot API', 'Pandas', 'NumPy', 'Ollama', 'Streamlit'],
+      image: '/DataBoy.jpg',
+      github: 'https://github.com/lebiraja/DATA_BOT_TELEGRAM',
+      demo: '#'
+    },
+    {
       title: 'PLUGIN - Local LLM Chat Interface',
-      description: 'A modern, feature-rich chat application for interacting with local large language models (LLMs) like Ollama and LM Studio with privacy, RAG support, and document Q&A. It blends a polished React + TypeScript UI with a powerful FastAPI backend, enabling conversation memory, web search, file uploads, and vector retrieval. Everything runs locally for user privacy and performance.',
+      description: 'Feature-rich chat application for interacting with local LLMs like Ollama and LM Studio with privacy, RAG support, and document Q&A. Blends React + TypeScript UI with FastAPI backend, enabling conversation memory, web search, file uploads, and vector retrieval.',
       technologies: ['React', 'TypeScript', 'FastAPI', 'Python', 'Ollama', 'RAG', 'ChromaDB'],
       image: '/plugin.jpg',
       github: 'https://github.com/lebiraja/plugin',
@@ -13,15 +53,15 @@ const Projects = () => {
     },
     {
       title: 'StudyMateAI',
-      description: 'An advanced learning companion that integrates Google Classroom and Drive APIs to automatically analyze assignments, retrieve materials, and generate intelligent responses using a local LLM. Features RAG pipeline with ChromaDB for context-aware answers.',
-      technologies: ['Python', 'Streamlit', 'Google API', 'LLM', 'ChromaDB'],
+      description: 'Advanced learning companion integrating Google Classroom and Drive APIs to automatically analyze assignments, retrieve materials, and generate intelligent responses using local LLM. Features RAG pipeline with ChromaDB for context-aware answers.',
+      technologies: ['Python', 'Streamlit', 'Google API', 'LLM', 'ChromaDB', 'RAG'],
       image: '/studymate.jpg',
       github: 'https://github.com/lebiraja/StudyMateAI',
       demo: '#'
     },
     {
       title: 'CareerWise AI',
-      description: 'An intelligent career mentor that analyzes user resumes and GitHub profiles to provide personalized career recommendations. Powered by LangChain and Ollama for deep insights into skills, projects, and career trajectory.',
+      description: 'Intelligent career mentor that analyzes user resumes and GitHub profiles to provide personalized career recommendations. Powered by LangChain and Ollama for deep insights into skills, projects, and career trajectory.',
       technologies: ['Python', 'Flask', 'Ollama', 'LangChain', 'NLP'],
       image: '/CareerWise.jpeg',
       github: 'https://github.com/lebiraja',
@@ -29,18 +69,10 @@ const Projects = () => {
     },
     {
       title: 'Hand Gesture Control System',
-      description: 'A real-time gesture-based control system with adaptive sensitivity and app-specific profiles. Merges OpenCV, MediaPipe, and PyAutoGUI for intuitive human-computer interaction, enabling hands-free control of applications.',
-      technologies: ['Python', 'OpenCV', 'MediaPipe', 'PyAutoGUI'],
+      description: 'Real-time gesture-based control system with adaptive sensitivity and app-specific profiles. Merges OpenCV, MediaPipe, and PyAutoGUI for intuitive human-computer interaction, enabling hands-free control of applications.',
+      technologies: ['Python', 'OpenCV', 'MediaPipe', 'PyAutoGUI', 'Computer Vision'],
       image: '/Hand Gesture Control System.jpg',
       github: 'https://github.com/lebiraja/HandGestureControl',
-      demo: '#'
-    },
-    {
-      title: 'Data-Boy Bot',
-      description: 'A Telegram bot that uses local LLMs to clean, validate, and summarize datasets uploaded by users. Automates data preprocessing tasks and provides intelligent insights, making data analysis accessible to everyone.',
-      technologies: ['Python', 'Telegram API', 'LLM', 'Pandas'],
-      image: '/Data-Boy Bot.jpeg',
-      github: 'https://github.com/lebiraja/DATA_BOT_TELEGRAM',
       demo: '#'
     }
   ];

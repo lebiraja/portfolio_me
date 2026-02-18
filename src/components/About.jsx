@@ -23,32 +23,33 @@ const About = () => {
             </div>
           </div>
           <div className="about-text">
-            <h3 className="about-heading">AI Engineer & Innovator</h3>
+            <h3 className="about-heading">AI Engineer & Machine Learning Specialist</h3>
             <p>
-              I'm <strong>LEBI RAJA</strong>, an Artificial Intelligence and Data Science engineering student at Karunya University. 
-              My journey in tech is driven by curiosity and the desire to turn ideas into tangible, impactful tools that make life easier and smarter.
+              I'm <strong>LEBI RAJA</strong>, an Artificial Intelligence and Data Science student at Karunya Institute of Technology and Sciences.
+              Specialized in designing and deploying intelligent systems — including Retrieval-Augmented Generation (RAG) pipelines, Large Language Model (LLM)
+              fine-tuning, and Computer Vision applications with hands-on experience in production-ready, user-centric products.
             </p>
             <p>
-              I've built multiple AI-driven projects — from <strong>StudyMateAI</strong>, a personalized learning assistant, to <strong>CareerWise AI</strong>, 
-              an intelligent career mentor. I develop creative computer vision systems that combine gesture recognition and language models to create 
-              futuristic human-computer interaction experiences.
+              I've engineered multiple AI-driven projects spanning RAG architectures, LLM fine-tuning with LoRA, voice-to-text utilities, and intelligent data processing systems.
+              My work bridges theoretical AI concepts with practical real-world applications, from <strong>ClarityMentor</strong> (fine-tuned philosophical AI) to <strong>DataBoy</strong>
+              (AI-powered data cleaning). I specialize in local LLM integration, scalable AI solutions, and computer vision systems.
             </p>
             <p>
-              Outside of development, I'm an anime enthusiast, traveler, and a thinker who enjoys exploring both technology and self-discovery. 
-              My goal is to create a lasting legacy through innovation, creativity, and empathy-driven design.
+              Passionate about building scalable AI technologies that solve real-world problems with innovation, technical excellence, and thoughtful design.
+              Experienced in mentoring teams on LLMs, RAG pipelines, and production-level code quality.
             </p>
             <div className="about-stats">
               <div className="stat-item">
-                <h4>2+</h4>
+                <h4>1.5+</h4>
                 <p>Years Experience</p>
               </div>
               <div className="stat-item">
-                <h4>10+</h4>
-                <p>Projects Completed</p>
+                <h4>12+</h4>
+                <p>Projects Shipped</p>
               </div>
               <div className="stat-item">
-                <h4>5+</h4>
-                <p>Collaborations</p>
+                <h4>3+</h4>
+                <p>Major Roles</p>
               </div>
             </div>
           </div>

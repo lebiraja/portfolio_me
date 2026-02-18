@@ -33,10 +33,10 @@ const Hero = () => {
         <h1 className="hero-title">
           Hi, I'm <span className="highlight">LEBI RAJA</span>
         </h1>
-        <p className="hero-subtitle">Artificial Intelligence & Data Science Engineer</p>
+        <p className="hero-subtitle">AI Engineer & Machine Learning Specialist</p>
         <p className="hero-description">
-          Passionate about building intelligent systems that merge innovation with real-world utility. 
-          I specialize in AI-powered automation, computer vision, and data-driven applications.
+          Building intelligent systems with RAG pipelines, LLM fine-tuning, and Computer Vision.
+          Specializing in production-ready AI solutions, from local LLM integration to scalable data processing systems.
         </p>
         <div className="hero-buttons">
           <a href="#projects" className="btn btn-primary">
